@@ -1,0 +1,60 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: record-service
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:mariadb://localhost:3306/recordDB
+    username: root
+    password: test1357
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 1000
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+greeting:
+  message: Wlcome to the StudyBread
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,beans,busrefresh
+
+token:
+  expiration_time: 86400000
+  secret: member_token_test_for_study_bread_dev_change

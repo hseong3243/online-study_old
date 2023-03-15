@@ -16,11 +16,13 @@ https://github.com/hseong3243/online-study
 
 - 사용자는 그룹을 생성, 참가하여 같은 학습 목표를 가진 사용자들과 함께 할 수 있다.<br>
 - 학습 티켓을 발행받아 학습 시간을 기록하고, 그룹원들의 학습 상태 변화(학습, 휴식, 종료)가 실시간으로 갱신<br>
+![589819b9dba86d34fec39aa5b35e75e8-3](https://user-images.githubusercontent.com/48748265/225347664-94ec689c-64b0-4850-9356-718645006f06.png)
 
 
 ### 2. 공부 기록
 
 - 그룹 스터디를 통해 서버에 저장된 학습 티켓을 기반으로 학습별로 일간, 주간, 월간 기록 차트를 제공
+![589819b9dba86d34fec39aa5b35e75e8-4](https://user-images.githubusercontent.com/48748265/225347878-d135753f-b92f-4d77-a07a-38e0de73155e.png)
 
 
 ## 발생문제 및 해결방법
@@ -48,8 +50,11 @@ https://github.com/hseong3243/online-study
 - MariaDB
 
 ## 아키텍처
+![589819b9dba86d34fec39aa5b35e75e8-0](https://user-images.githubusercontent.com/48748265/225348030-1852a267-694b-41f9-892d-123ab5acd72d.png)
 
 
+## DB
+![589819b9dba86d34fec39aa5b35e75e8-5](https://user-images.githubusercontent.com/48748265/225348162-92677b61-2569-4757-ada5-b92c0ce681c0.png)
 
 
 ## 배운 점, 부족했던 점
